@@ -12,7 +12,7 @@
 
 #### Execute software and tests
 
-## > [!WARNING]
+### > Warning
 
 > This software is designed to only operate in the directory specified by the user
 > Prompt injection safety cannot be guaranteed, make sure you trust any skills or context files
