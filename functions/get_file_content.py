@@ -1,5 +1,20 @@
 import os
 from config import CHARACTER_LIMIT
+from google.genai import types
+
+schema_get_file_content = types.FunctionDeclaration(
+    name="get_file_content",
+    description=f"Returns the text content of the specified file up to a limit of {CHARACTER_LIMIT} characters",
+    parameters=types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "file_path": types.Schema(
+                type=types.Type.STRING,
+                description="File path to read content from, relative to the working directory (default is the working directory itself)",
+            ),
+        },
+    ),
+)
 
 
 def get_file_content(working_directory, file_path):
